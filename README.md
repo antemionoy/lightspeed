@@ -16,22 +16,29 @@ Application for working with Ecwid store, implementing:
 src/
 ├── app/          # Application initialization, routing
 ├── pages/        # Application pages
-│   ├── products/ # Catalog page
-│   ├── product/  # Product page
-│   └── cart/     # Cart page
+│   ├── products/ # Catalog page with categories and products
+│   ├── product/  # Product detail page
+│   ├── cart/     # Shopping cart page
+│   └── notFound/ # 404 page
 ├── widgets/      # Widgets (compositional blocks)
-│   ├── products/ # Product list
-│   ├── categories/# Category list
-│   └── cart/     # Cart icon
+│   ├── products/ # Product list widget
+│   ├── categories/# Category list widget
+│   ├── cart/     # Cart widgets (Icon, Item, List, Total)
+│   └── layout/   # Layout widgets (AppLayout, Header, Footer)
 ├── features/     # Features (business logic)
-│   └── cart/     # Add/remove from cart, order placement
+│   └── cart/     # Cart features
+│       ├── cartQuantityControl/  # Add/update quantity
+│       ├── placeOrder/            # Order placement
+│       └── removeFromCart/        # Remove items
 ├── entities/     # Entities (business entities)
-│   ├── product/  # Product
-│   ├── category/ # Category
-│   └── cart/     # Cart item
+│   ├── product/  # Product entity (API hooks, UI components, utils)
+│   ├── category/ # Category entity (API hooks, UI components)
+│   └── cart/     # Cart entity (storage, hooks, types)
 └── shared/       # Reusable components and utilities
-    ├── api/      # Ecwid API client
-    └── lib/      # Utilities (cart storage)
+    ├── api/      # Ecwid API client (Axios config, endpoints)
+    ├── config/   # App configuration (routes, providers, theme)
+    ├── lib/      # Utilities (breadcrumbs, price, params)
+    └── ui/       # UI components (Counter, Loader, Price, etc)
 ```
 
 ## Technologies
