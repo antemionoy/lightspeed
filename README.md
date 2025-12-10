@@ -65,6 +65,7 @@ Or create `.env` manually with the following content:
 # Ecwid API Configuration
 VITE_ECWID_STORE_ID=108362264
 VITE_ECWID_TOKEN=public_RiNvjTVVzKLhFNWyzR5fNY68u1GMHLEs
+VITE_ECWID_BASE_URL=https://app.ecwid.com/api/v3
 ```
 
 ## Running
